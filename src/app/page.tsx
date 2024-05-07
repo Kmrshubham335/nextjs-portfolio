@@ -7,6 +7,7 @@ import 'animate.css';
 export default function Home() {
   return (
     <main>
+      {/* Sections */}
       <About />
       <Projects />
       <Skills />
