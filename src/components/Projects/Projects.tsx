@@ -7,10 +7,10 @@ const Projects = () => {
     <section id="projects" className='my-20  justify-center flex flex-col animate__animated animate__fadeIn animate__delay-2s'>
         <p className='text-[30px] font-bold text-center dark:bg-gradient-to-r from-[#3927A7] to-[#B70707] dark:bg-clip-text dark:text-transparent'>PROJECTS</p>
         <div className='flex justify-center'>
-            <div className='grid grid-cols-1 items-center content-center lg:grid-cols-2 p-20 gap-20'>
+            <div className='grid grid-cols-1 items-center content-center lg:grid-cols-2 gap-20 md:p-20'>
                 {projects.map((project,index)=>{
                     return (
-                        <div key={project.title + index} className='flex flex-col items-center w-[380px]
+                        <div key={project.title + index} className='flex flex-col items-center w-[330px] md:w-[380px]
                           border rounded-2xl border-none shadow-2xl shadow-blue-900 cursor-pointer hover:-translate-y-20'>
                             <Image src={project.image} alt={project.title} height={220} width={350}
                              className='border rounded-xl bg-cover bg-center mt-4 border-none'/>

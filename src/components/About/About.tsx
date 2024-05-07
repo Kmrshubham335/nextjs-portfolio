@@ -11,11 +11,11 @@ const About = () => {
             </p>
             </div>
             <div className='animate__animated animate__fadeIn'>
-            <p className='text-[30px] mt-10 mb-5'>Hey, I'm  <span className='items-center font-bold dark:bg-gradient-to-r from-[#1E2A94] to-[#999999] dark:bg-clip-text dark:text-transparent'>{ABOUT_SECTION.name} </span>{ABOUT_SECTION.greeting}</p>
-            <p className='text-[30px] mb-10'>I'm a {ABOUT_SECTION.title}.</p>
+            <p className='text-[30px] mt-10 text-center mb-5'>Hey, I'm  <span className='items-center font-bold dark:bg-gradient-to-r from-[#1E2A94] to-[#999999] dark:bg-clip-text dark:text-transparent'>{ABOUT_SECTION.name} </span>{ABOUT_SECTION.greeting}</p>
+            <p className='text-[30px] text-center mb-10'>I'm a {ABOUT_SECTION.title}.</p>
             </div>
             <div className='content-center items-center animate__animated animate__fadeIn animate__delay-3s'>
-            <p className='text-[20px]  px-2 mb-10 leading-loose dark:bg-gradient-to-r from-[#F8F1F1] to-[#404146] dark:bg-clip-text dark:text-transparent'>{ABOUT_SECTION.description}</p>
+            <p className='text-[20px] text-center  px-2 mb-10 leading-loose dark:bg-gradient-to-r from-[#F8F1F1] to-[#404146] dark:bg-clip-text dark:text-transparent'>{ABOUT_SECTION.description}</p>
             </div>
         </div>
 
