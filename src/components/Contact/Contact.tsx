@@ -2,6 +2,8 @@
 import { contact } from '@/data/portfolio';
 import Link from 'next/link';
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Define the form state type
 interface FormState {
@@ -16,8 +18,6 @@ const Contact = () => {
     lastName: '',
     email: '',
   });
-
-  const [message, setMessage] = useState<string>('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -40,13 +40,37 @@ const Contact = () => {
 
       const result = await response.json();
       if (response.ok) {
-        setMessage('Form submitted successfully');
+        toast.success('Form submitted successfully', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
         setForm({ firstName: '', lastName: '', email: '' });
       } else {
-        setMessage(result.message || 'Form submission failed');
+        toast.error(result.message || 'Form submission failed', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
       }
     } catch (error) {
-      setMessage('An error occurred while submitting the form');
+      toast.error('An error occurred while submitting the form', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
   };
 
@@ -111,7 +135,7 @@ const Contact = () => {
           </button>
         </div>
       </form>
-      {message && <p className='mt-4 text-center text-sm text-red-500'>{message}</p>}
+      <ToastContainer />
     </section>
   );
 };

@@ -2,6 +2,7 @@ import AndroidIcon from "@/components/common/AndroidIcon"
 import CSSIcon from "@/components/common/CSSIcon"
 import GithubIcon from "@/components/common/GithubIcon"
 import HtmlIcon from "@/components/common/HtmlIcon"
+import JavaIcon from "@/components/common/JavaIcon"
 import JavascriptIcon from "@/components/common/JavascriptIcon"
 import LinkedInIcon from "@/components/common/LinkedInIcon"
 import MongoIcon from "@/components/common/MongoIcon"
@@ -10,7 +11,6 @@ import { NextIcon } from "@/components/common/NextIcon"
 import NodeJsIcon from "@/components/common/NodeJsIcon"
 import ReactIcon from "@/components/common/ReactIcon"
 import SpringBootIcon from "@/components/common/SpringBootIcon"
-import TailwindCss from "@/components/common/TailwindCssIcon"
 import TSIcon from "@/components/common/TSIcon"
 
 
@@ -55,33 +55,33 @@ export const projects = [
         image:'/static/images/project-1.png'
     },
     {
-        title:"MedTrue",
-        description:"Empowering Health, One Tap at a Time: Manage, Book, Analyze.",
-        github_link:"",
-        tech_stack:[ReactIcon,TSIcon,HtmlIcon,CSSIcon,AndroidIcon],
-        image:'/static/images/project-2.jpg'
+        title:"Tic tac Toe",
+        description:"A classic Tic Tac Toe game built with HTML, CSS, and JavaScript. Play against a friend locally on any device, with responsive design for seamless gameplay.",
+        github_link:"https://github.com/Kmrshubham335/Complete-WebDevelopment-Resource/tree/main/JavaScript/Project_JS",
+        tech_stack:[JavascriptIcon,HtmlIcon,CSSIcon],
+        image:'/static/images/project-2.png'
     },
     {
-        title:"HarmonyFlow",
-        description:"Harmonize Your Yoga Journey with AI-Powered Wisdom.",
+        title:"ExpressJS Login Authentication",
+        description:"Implementing secure user authentication in ExpressJS using EJS for dynamic views. This application allows users to register, login, and access protected routes securely. Utilizes sessions and cookies for persistent login sessions.",
         github_link:"",
-        tech_stack:[ReactIcon,TSIcon,HtmlIcon,CSSIcon,NodeJsIcon,MongoIcon],
+        tech_stack:[HtmlIcon,CSSIcon,NodeJsIcon,MongoIcon],
         image:'/static/images/project-3.png'
     },
     {
-        title:"Task Management",
-        description:"Effortless Productivity: Simplify, Organize, Achieve.",
+        title:"To-Do-List",
+        description:"A simple yet powerful To-Do List application built with modern web technologies. Organize your tasks, set priorities, and track your progress effortlessly. ",
         github_link:"",
-        tech_stack:[ReactIcon,TSIcon,HtmlIcon,CSSIcon,SpringBootIcon,MySQLIcon],
+        tech_stack:[HtmlIcon,CSSIcon,JavascriptIcon],
         image:'/static/images/project-4.png'
     }
 ]
 
 export const skills = [
-    ReactIcon,TSIcon,HtmlIcon,CSSIcon,JavascriptIcon,MongoIcon,NodeJsIcon, MySQLIcon,NextIcon 
+    ReactIcon,TSIcon,HtmlIcon,CSSIcon,JavascriptIcon,MongoIcon,NodeJsIcon, MySQLIcon,NextIcon,GithubIcon,JavaIcon
 ]
 
-// src/data/portfolio.ts
+
 
 
 export const contact = {
@@ -90,11 +90,11 @@ export const contact = {
   links: [
     {
       icon: GithubIcon as IconType,
-      link: 'https://github.com/pardeep16/',
+      link: 'https://github.com/Kmrshubham335/',
     },
     {
       icon: LinkedInIcon as IconType,
-      link: 'https://www.linkedin.com/in/pardeep16/',
+      link: 'https://www.linkedin.com/in/shubhamkumar68/',
     },
   ],
 };
