@@ -10,8 +10,8 @@ import { NextIcon } from "@/components/common/NextIcon"
 import NodeJsIcon from "@/components/common/NodeJsIcon"
 import ReactIcon from "@/components/common/ReactIcon"
 import SpringBootIcon from "@/components/common/SpringBootIcon"
+import TailwindCss from "@/components/common/TailwindCssIcon"
 import TSIcon from "@/components/common/TSIcon"
-import { link } from "fs"
 
 
 export const navBarLink = [
@@ -35,23 +35,23 @@ export const navBarLink = [
 
 export const attachment = {
     "title":"Resume",
-    "href":"/resume-path"
+    "href":"/static/Shubham_Kumar.pdf"
 }
 
 export const ABOUT_SECTION = {
-    displayText:"Transforming code into seamless user experiences.",
-    name:"Pradeep",
-    title:"Software Engineer",
-    description:"With 6+ years of hands-on experience, I specialize in end-to-end web and mobile development, combining front-end finesse with back-end prowess to build dynamic and responsive digital solutions.",
+    displayText:"Welcome to the digital universe, where I'm the architect of tomorrow's experiences.",
+    name:"Shubham",
+    title:"Digital Alchemist: Transforming Tomorrow's Experiences",
+    description:"I believe in designing tomorrow's experiences today, and I'm dedicated to exploring new ideas and pushing the limits of innovation. Through my work, I strive to create impactful solutions that inspire and delight users.",
     greeting:'👋'
 }
 
 export const projects = [
     {
-        title:"Store 24",
-        description:"Discover Fashion's Finest: Shop, Connect, Elevate.",
-        github_link:"",
-        tech_stack:[ReactIcon,TSIcon,HtmlIcon,CSSIcon],
+        title:"CollabCanva",
+        description:"Developed a real-time collaborative platform called CollabCanvas using ReactJS, NextJS, Tailwind CSS,Clerk, and Convex.",
+        hosting_link:"https://collabcanvas-alpha.vercel.app/",
+        tech_stack:[NextIcon,ReactIcon,HtmlIcon,CSSIcon],
         image:'/static/images/project-1.png'
     },
     {

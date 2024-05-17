@@ -27,9 +27,10 @@ const Navbar = () => {
             {/*  */}
             {resolvedTheme ==="dark" ? <SunIcon id='dark' onClick={()=>setTheme("light")} className='h-6 w-6 text-white cursor-pointer'/>
             :<MoonIcon id='light' onClick={()=>setTheme("dark")} className='h-6 w-6 text-black cursor-pointer'/>}
-            <div className='flex px-2 flex-wrap'>
-                <Link className='flex flex-wrap' href={attachment.href}>{attachment?.title} <ArrowDownTrayIcon className='h-6 w-6' /></Link>
-            </div>
+
+<div className='flex px-2 flex-wrap'>
+    <a className='flex flex-wrap' href={attachment.href} download>{attachment?.title} <ArrowDownTrayIcon className='h-6 w-6' /></a>
+</div>
             
         </div>
 
