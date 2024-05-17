@@ -78,20 +78,28 @@ export const projects = [
 ]
 
 export const skills = [
-    ReactIcon,TSIcon,HtmlIcon,CSSIcon,JavascriptIcon, SpringBootIcon,MongoIcon,NodeJsIcon, MySQLIcon,NextIcon 
+    ReactIcon,TSIcon,HtmlIcon,CSSIcon,JavascriptIcon,MongoIcon,NodeJsIcon, MySQLIcon,NextIcon 
 ]
 
+// src/data/portfolio.ts
+
+
 export const contact = {
-    "title":"Contact",
-    "description":"Need software solutions that streamline your business? Let's collaborate on innovative tech projects.",
-    links:[
-        {
-            icon:GithubIcon,
-            link:'https://github.com/pardeep16/'
-        },
-        {
-            icon:LinkedInIcon,
-            link:'https://www.linkedin.com/in/pardeep16/'
-        }
-    ]
-}
+  title: "Contact",
+  description: "Need software solutions that streamline your business? Let's collaborate on innovative tech projects.",
+  links: [
+    {
+      icon: GithubIcon as IconType,
+      link: 'https://github.com/pardeep16/',
+    },
+    {
+      icon: LinkedInIcon as IconType,
+      link: 'https://www.linkedin.com/in/pardeep16/',
+    },
+  ],
+};
+
+// src/types/IconType.ts
+import { ComponentType, SVGProps } from 'react';
+
+export type IconType = ComponentType<SVGProps<SVGSVGElement> & { className?: string }>;
