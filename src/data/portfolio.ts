@@ -42,7 +42,9 @@ export const ABOUT_SECTION = {
     displayText:"Welcome to the digital universe, where I'm the architect of tomorrow's experiences.",
     name:"Shubham",
     title:"Digital Alchemist: Transforming Tomorrow's Experiences",
-    description:"I believe in designing tomorrow's experiences today, and I'm dedicated to exploring new ideas and pushing the limits of innovation. Through my work, I strive to create impactful solutions that inspire and delight users.",
+    description:"I am an aspiring full stack web developer. I have a strong foundation in front-end & back-end development and am skilled in creating user-friendly and responsive web application using React and its ecosystem.",
+    about:"Hello! Myself Shubham Kumar and I enjoy creating things that live on the internet. My interest in web development started back in 2021 when I started my BCA journey. Me and my friends used to build web application with different tech stacks to explore the different tools invented for building web applications. Thats where I got the urge to learn all kinds of computer languages.Fast-forward to today, and I have made few web app projects of my own and am currently looking to join an organization.",
+    about_second:"I possess a strong ability to quickly adapt to new tools and frameworks. As an avid learner, I am excited about the opportunity to contribute my skills while expanding my knowledge in a professional setting. I understand the importance of collaborative teamwork in achieving project success. My experiences working on group projects and participating in coding competitions have prepared me to contribute effectively within a team environment.",
     greeting:'👋'
 }
 
@@ -85,8 +87,6 @@ export const skills = [
 
 
 export const contact = {
-  title: "Contact",
-  description: "Need software solutions that streamline your business? Let's collaborate on innovative tech projects.",
   links: [
     {
       icon: GithubIcon as IconType,

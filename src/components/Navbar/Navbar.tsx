@@ -1,41 +1,43 @@
 'use client';
-import { attachment, navBarLink } from '@/data/portfolio'
-import Link from 'next/link'
-import React, {  useState } from 'react'
-import { SunIcon,MoonIcon,ArrowDownTrayIcon } from '@heroicons/react/24/outline';
+import { attachment, navBarLink } from '@/data/portfolio';
+import Link from 'next/link';
+import React, { useState } from 'react';
+import { SunIcon, MoonIcon, ArrowDownTrayIcon } from '@heroicons/react/24/outline';
 import { useTheme } from 'next-themes';
 
 const Navbar = () => {
-  const [active,setActive] = useState<string>('');
-  const {setTheme,resolvedTheme}= useTheme();
- 
+  const [active, setActive] = useState<string>('');
+  const { setTheme, resolvedTheme } = useTheme();
 
   return (
-    <div className='flex justify-between text-gray-600  dark:text-gray-400 animate__animated animate__fadeIn animate__delay-2s'>
-        <div className='flex w-[70%] lg:w-[60%] justify-end mt-4'>
-            <ul className='flex flex-wrap gap-3 md:gap-8 items-center dark:bg-[#25252E] border rounded-lg  border-gray-400 dark:border-gray-700 px-2 lg:px-8 h-12 lg:h-16'>
-                {navBarLink?.map((navBar,index)=> <li className='dark:hover:text-white hover:text-gray-400' onClick={()=>setActive(navBar?.title)} style={active === navBar?.title ?{
-                    color:resolvedTheme=="dark"?'white':'black'
-                }:{}} key={navBar.title+index}>
-                    <Link href={navBar.href}>{navBar.title}</Link>
-                </li>)}
-                
-            </ul>
+    <nav className="flex justify-between items-center p-4 md:px-8 text-gray-600 dark:text-gray-400 animate__animated animate__fadeIn animate__delay-2s bg-white dark:bg-[#25252E] shadow-lg">
+      <div className="flex justify-between w-full md:w-auto">
+        <ul className="flex flex-wrap gap-3 md:gap-8 items-center bg-white dark:bg-[#25252E] border rounded-lg border-gray-400 dark:border-gray-700 px-4 py-2">
+          {navBarLink?.map((navBar, index) => (
+            <li
+              className={`dark:hover:text-white hover:text-gray-400 cursor-pointer transition-colors ${
+                active === navBar?.title ? (resolvedTheme === 'dark' ? 'text-white' : 'text-black') : ''
+              }`}
+              onClick={() => setActive(navBar?.title)}
+              key={navBar.title + index}
+            >
+              <Link href={navBar.href}>{navBar.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="flex items-center gap-4 md:gap-8">
+        {resolvedTheme === 'dark' ? (
+          <SunIcon onClick={() => setTheme('light')} className="h-6 w-6 text-white cursor-pointer" />
+        ) : (
+          <MoonIcon onClick={() => setTheme('dark')} className="h-6 w-6 text-black cursor-pointer" />
+        )}
+        <a href={attachment.href} download className="flex items-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+          {attachment?.title} <ArrowDownTrayIcon className="h-6 w-6" />
+        </a>
+      </div>
+    </nav>
+  );
+};
 
-        </div>
-        <div className='flex flex-wrap mt-4 md:mt-0 flex-col md:flex-row gap-4 lg:gap-8 md:justify-end lg:mr-8 items-center'>
-            {/*  */}
-            {resolvedTheme ==="dark" ? <SunIcon id='dark' onClick={()=>setTheme("light")} className='h-6 w-6 text-white cursor-pointer'/>
-            :<MoonIcon id='light' onClick={()=>setTheme("dark")} className='h-6 w-6 text-black cursor-pointer'/>}
-
-<div className='flex px-2 flex-wrap'>
-    <a className='flex flex-wrap' href={attachment.href} download>{attachment?.title} <ArrowDownTrayIcon className='h-6 w-6' /></a>
-</div>
-            
-        </div>
-
-    </div>
-  )
-}
-
-export default Navbar
+export default Navbar;
