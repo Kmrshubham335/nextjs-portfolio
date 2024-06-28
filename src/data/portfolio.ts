@@ -35,7 +35,7 @@ export const navBarLink = [
 
 export const attachment = {
     "title":"Resume",
-    "href":"/static/Shubham_Kumar.pdf"
+    "href":"/static/Shubham_Demo.pdf"
 }
 
 export const ABOUT_SECTION = {
